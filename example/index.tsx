@@ -2,11 +2,10 @@ import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import styled from '@emotion/styled';
-import { Jazzicon, BASE_STYLES } from '../.';
+import { Jazzicon } from '../.';
 import { ChangeEvent, useState } from 'react';
 
 const ModifiedJazzicon = styled(Jazzicon)({
-  ...BASE_STYLES,
   width: 100,
   height: 100,
 });

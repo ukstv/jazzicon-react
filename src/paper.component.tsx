@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import React from 'react';
 import Color from 'color';
 
 export const BASE_STYLES = {
@@ -14,20 +14,16 @@ export const BASE_STYLES = {
 export interface PaperProps {
   color: Color;
   className?: string;
-  style?: CSSProperties;
 }
 
 export function Paper(props: React.PropsWithChildren<PaperProps>) {
-  const style = Object.assign(
-    {},
-    props.className ? {} : BASE_STYLES,
-    { backgroundColor: props.color.hex() },
-    props.style
-  );
+  const style = Object.assign({}, BASE_STYLES, {
+    backgroundColor: props.color.hex(),
+  });
 
   return (
-    <div style={style} className={props.className}>
-      {props.children}
+    <div className={props.className}>
+      <div style={style}>{props.children}</div>
     </div>
   );
 }

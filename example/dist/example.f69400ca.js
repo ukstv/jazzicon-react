@@ -36399,13 +36399,14 @@ var BASE_STYLES = {
 exports.BASE_STYLES = BASE_STYLES;
 
 function Paper(props) {
-  var style = Object.assign({}, props.className ? {} : BASE_STYLES, {
+  var style = Object.assign({}, BASE_STYLES, {
     backgroundColor: props.color.hex()
-  }, props.style);
+  });
   return _react.default.createElement("div", {
-    style: style,
     className: props.className
-  }, props.children);
+  }, _react.default.createElement("div", {
+    style: style
+  }, props.children));
 }
 
 var SVG_NS = 'http://www.w3.org/2000/svg';
@@ -36476,22 +36477,6 @@ function Jazzicon(props) {
 },{"color":"../node_modules/color/index.js","react":"../node_modules/react/index.js","mersenne-twister":"../node_modules/mersenne-twister/src/mersenne-twister.js"}],"index.tsx":[function(require,module,exports) {
 "use strict";
 
-var __assign = this && this.__assign || function () {
-  __assign = Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-      s = arguments[i];
-
-      for (var p in s) {
-        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-      }
-    }
-
-    return t;
-  };
-
-  return __assign.apply(this, arguments);
-};
-
 var __importStar = this && this.__importStar || function (mod) {
   if (mod && mod.__esModule) return mod;
   var result = {};
@@ -36524,10 +36509,10 @@ var _1 = require("../.");
 
 var react_1 = require("react");
 
-var ModifiedJazzicon = styled_1.default(_1.Jazzicon)(__assign(__assign({}, _1.BASE_STYLES), {
+var ModifiedJazzicon = styled_1.default(_1.Jazzicon)({
   width: 100,
   height: 100
-}));
+});
 var Input = styled_1.default.input({
   width: 300,
   display: 'block'
@@ -36545,7 +36530,7 @@ var App = function App() {
 
   return /*#__PURE__*/React.createElement("div", {
     className: 'container'
-  }, /*#__PURE__*/React.createElement("h1", null, "Jazzicon-React Demo"), /*#__PURE__*/React.createElement("p", null, "Here is a demo of jazzicon-react package. It generates an SVG based on Ethereum address."), /*#__PURE__*/React.createElement("p", null, "Put an Ethereum address here:", /*#__PURE__*/React.createElement(Input, {
+  }, /*#__PURE__*/React.createElement("h1", null, "Jazzicon-React Demo"), /*#__PURE__*/React.createElement("p", null, "Here is a demo of jazzicon-react package. It generates an inline SVG based on Ethereum address."), /*#__PURE__*/React.createElement("p", null, "Put an Ethereum address here:", /*#__PURE__*/React.createElement(Input, {
     type: 'text',
     defaultValue: address,
     onChange: handleChange
@@ -36583,7 +36568,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59525" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52619" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

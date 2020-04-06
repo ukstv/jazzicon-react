@@ -29,10 +29,9 @@ Remember to wrap `Jazzicon` component into something with desired width and heig
 Alternatively, you could modify appearance via [styled-components](https://styled-components.com) or [emotion](https://emotion.sh):
 
 ```typescript jsx
-import { Jazzicon, BASE_STYLES } from '@ukstv/jazzicon-react';
+import { Jazzicon } from '@ukstv/jazzicon-react';
 import styled from '@emotion/styled';
 const ModifiedJazzicon = styled(Jazzicon)({
-  ...BASE_STYLES,
   width: 100,
   height: 100,
 });
