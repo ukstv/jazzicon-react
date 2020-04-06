@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-a.3",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -36,6 +36,7 @@
   "name": "@ukstv/jazzicon-react",
   "author": "Sergey Ukustov <sergey@ukstv.me>",
   "module": "dist/jazzicon-react.esm.js",
+  "description": "Dan Finlay's Jazzicon in pure React",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@storybook/addon-actions": "^5.3.18",

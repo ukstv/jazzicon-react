@@ -9,6 +9,7 @@ const DEFAULT_SHAPE_COUNT = 4;
 
 export interface JazziconProps {
   address: string;
+  className?: string;
 }
 
 function times(n: number): number[] {
@@ -36,7 +37,7 @@ export function Jazzicon(props: JazziconProps) {
   };
 
   return (
-    <Paper color={paperColor}>
+    <Paper color={paperColor} className={props.className}>
       <svg x={0} y={0} xmlns={SVG_NS} viewBox={'0 0 100 100'}>
         {renderShapes()}
       </svg>
