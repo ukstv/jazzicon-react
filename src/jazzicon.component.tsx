@@ -5,7 +5,7 @@ import { Paper } from './paper.component';
 import { Shape } from './shape.component';
 import { SVG_NS } from './svg.ns';
 
-const DEFAULT_SHAPE_COUNT = 4;
+const DEFAULT_SHAPE_COUNT = 3;
 
 export interface JazziconProps {
   address: string;

@@ -32,6 +32,7 @@ export class Colors {
   }
 
   next() {
+    this.generator.random(); // Apparently, to maintain compatibility with original Jazzicon
     const idx = Math.floor(this.colors.length * this.generator.random());
     return this.colors.splice(idx, 1)[0];
   }
