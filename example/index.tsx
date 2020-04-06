@@ -29,7 +29,7 @@ const App = () => {
   return (
     <div className={'container'}>
       <h1>Jazzicon-React Demo</h1>
-      <p>Here is a demo of jazzicon-react package. It generates an SVG based on Ethereum address.</p>
+      <p>Here is a demo of jazzicon-react package. It generates an inline SVG based on Ethereum address.</p>
       <p>
         Put an Ethereum address here:
         <Input type={'text'} defaultValue={address} onChange={handleChange} />

@@ -2,7 +2,7 @@
 
 > Reimplementation of [Dan Finlay's jazzicon](https://github.com/danfinlay/jazzicon) in pure react.
 
-It avoids calling `document` or `window`, thus suitable for server-side-generated pages, like in [Next.js](https://nextjs.org).
+Generates inline SVG for an icon based on Ethereum address. It avoids calling `document`, thus suitable for server-side-generated pages, like in [Next.js](https://nextjs.org).
 
 ## Installation
 
