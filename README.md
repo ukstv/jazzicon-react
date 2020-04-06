@@ -4,6 +4,8 @@
 
 Generates inline SVG for an icon based on Ethereum address. It avoids calling `document`, thus suitable for server-side-generated pages, like in [Next.js](https://nextjs.org).
 
+[Online Demo](https://ukstv.github.io/jazzicon-react/)
+
 ## Installation
 
 ```
